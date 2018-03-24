@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D46385AB8835314BC8776B9 /* Pods_YLLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600ED449EC9E19AA648C0696 /* Pods_YLLive.framework */; };
+		1E385A06E502C1E467FB3CC0 /* Pods_YLLiveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CAECE9550A417D9F9D2569 /* Pods_YLLiveTests.framework */; };
 		381510A5205017330020C1EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381510A4205017330020C1EE /* AppDelegate.swift */; };
 		381510A7205017330020C1EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381510A6205017330020C1EE /* ViewController.swift */; };
 		381510AA205017330020C1EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381510A8205017330020C1EE /* Main.storyboard */; };
@@ -14,6 +16,12 @@
 		381510AF205017330020C1EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381510AD205017330020C1EE /* LaunchScreen.storyboard */; };
 		381510BA205017330020C1EE /* YLLiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381510B9205017330020C1EE /* YLLiveTests.swift */; };
 		381510C5205017330020C1EE /* YLLiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381510C4205017330020C1EE /* YLLiveUITests.swift */; };
+		3867DF44205CA83900BF89D7 /* YLPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867DF43205CA83900BF89D7 /* YLPageView.swift */; };
+		3867DF46205CA84300BF89D7 /* YLTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867DF45205CA84300BF89D7 /* YLTitleView.swift */; };
+		3867DF48205CA85200BF89D7 /* YLContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867DF47205CA85200BF89D7 /* YLContentView.swift */; };
+		3867DF4A205CA85E00BF89D7 /* YLPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867DF49205CA85E00BF89D7 /* YLPageStyle.swift */; };
+		3867DF4E206296A000BF89D7 /* UIColor-Extentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867DF4D206296A000BF89D7 /* UIColor-Extentsion.swift */; };
+		EAEB71C38A6D8A3417DB988F /* Pods_YLLiveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8889435DCB02929BAA70F4D1 /* Pods_YLLiveUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07CAECE9550A417D9F9D2569 /* Pods_YLLiveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YLLiveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2664FDD27F1335A4BD1EB95B /* Pods-YLLiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLLiveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YLLiveTests/Pods-YLLiveTests.release.xcconfig"; sourceTree = "<group>"; };
 		381510A1205017330020C1EE /* YLLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		381510A4205017330020C1EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		381510A6205017330020C1EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,18 @@
 		381510C0205017330020C1EE /* YLLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YLLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		381510C4205017330020C1EE /* YLLiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLLiveUITests.swift; sourceTree = "<group>"; };
 		381510C6205017330020C1EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3867DF43205CA83900BF89D7 /* YLPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLPageView.swift; sourceTree = "<group>"; };
+		3867DF45205CA84300BF89D7 /* YLTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLTitleView.swift; sourceTree = "<group>"; };
+		3867DF47205CA85200BF89D7 /* YLContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLContentView.swift; sourceTree = "<group>"; };
+		3867DF49205CA85E00BF89D7 /* YLPageStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLPageStyle.swift; sourceTree = "<group>"; };
+		3867DF4D206296A000BF89D7 /* UIColor-Extentsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extentsion.swift"; sourceTree = "<group>"; };
+		4492F93E688E403312ABAEAF /* Pods-YLLiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLLiveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YLLiveUITests/Pods-YLLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
+		555C188519EF76C3ACC11CD3 /* Pods-YLLiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLLiveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YLLiveTests/Pods-YLLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		600ED449EC9E19AA648C0696 /* Pods_YLLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YLLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		805719586429E59011BB91C4 /* Pods-YLLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLLiveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YLLiveUITests/Pods-YLLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8889435DCB02929BAA70F4D1 /* Pods_YLLiveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YLLiveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CC0AFDA78843DFA4AF121A2 /* Pods-YLLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YLLive/Pods-YLLive.debug.xcconfig"; sourceTree = "<group>"; };
+		EA6B465AA76E7024C6187699 /* Pods-YLLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-YLLive/Pods-YLLive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D46385AB8835314BC8776B9 /* Pods_YLLive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E385A06E502C1E467FB3CC0 /* Pods_YLLiveTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAEB71C38A6D8A3417DB988F /* Pods_YLLiveUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +106,8 @@
 				381510B8205017330020C1EE /* YLLiveTests */,
 				381510C3205017330020C1EE /* YLLiveUITests */,
 				381510A2205017330020C1EE /* Products */,
+				F03AFC8181AF216B9478D5E8 /* Pods */,
+				A3F19A904808945F0FCCCE06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +124,10 @@
 		381510A3205017330020C1EE /* YLLive */ = {
 			isa = PBXGroup;
 			children = (
+				3867DF3C205CA78600BF89D7 /* YLPageView */,
 				381510A4205017330020C1EE /* AppDelegate.swift */,
 				381510A6205017330020C1EE /* ViewController.swift */,
+				3867DF4D206296A000BF89D7 /* UIColor-Extentsion.swift */,
 				381510A8205017330020C1EE /* Main.storyboard */,
 				381510AB205017330020C1EE /* Assets.xcassets */,
 				381510AD205017330020C1EE /* LaunchScreen.storyboard */,
@@ -125,6 +154,40 @@
 			path = YLLiveUITests;
 			sourceTree = "<group>";
 		};
+		3867DF3C205CA78600BF89D7 /* YLPageView */ = {
+			isa = PBXGroup;
+			children = (
+				3867DF43205CA83900BF89D7 /* YLPageView.swift */,
+				3867DF45205CA84300BF89D7 /* YLTitleView.swift */,
+				3867DF47205CA85200BF89D7 /* YLContentView.swift */,
+				3867DF49205CA85E00BF89D7 /* YLPageStyle.swift */,
+			);
+			path = YLPageView;
+			sourceTree = "<group>";
+		};
+		A3F19A904808945F0FCCCE06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				600ED449EC9E19AA648C0696 /* Pods_YLLive.framework */,
+				07CAECE9550A417D9F9D2569 /* Pods_YLLiveTests.framework */,
+				8889435DCB02929BAA70F4D1 /* Pods_YLLiveUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F03AFC8181AF216B9478D5E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CC0AFDA78843DFA4AF121A2 /* Pods-YLLive.debug.xcconfig */,
+				EA6B465AA76E7024C6187699 /* Pods-YLLive.release.xcconfig */,
+				555C188519EF76C3ACC11CD3 /* Pods-YLLiveTests.debug.xcconfig */,
+				2664FDD27F1335A4BD1EB95B /* Pods-YLLiveTests.release.xcconfig */,
+				805719586429E59011BB91C4 /* Pods-YLLiveUITests.debug.xcconfig */,
+				4492F93E688E403312ABAEAF /* Pods-YLLiveUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 381510C9205017330020C1EE /* Build configuration list for PBXNativeTarget "YLLive" */;
 			buildPhases = (
+				F8647A1C3C1DB7826FE94FB4 /* [CP] Check Pods Manifest.lock */,
 				3815109D205017320020C1EE /* Sources */,
 				3815109E205017320020C1EE /* Frameworks */,
 				3815109F205017320020C1EE /* Resources */,
+				94BCE11B7DA78DF7E17CF736 /* [CP] Embed Pods Frameworks */,
+				CB232F0CC8FF992A89977063 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 381510CC205017330020C1EE /* Build configuration list for PBXNativeTarget "YLLiveTests" */;
 			buildPhases = (
+				DA2A0186DF592F175F39633E /* [CP] Check Pods Manifest.lock */,
 				381510B1205017330020C1EE /* Sources */,
 				381510B2205017330020C1EE /* Frameworks */,
 				381510B3205017330020C1EE /* Resources */,
+				97B8FAEE0AF0731B4D35F64F /* [CP] Embed Pods Frameworks */,
+				A7646967ABCED9EFC30C1780 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 381510CF205017330020C1EE /* Build configuration list for PBXNativeTarget "YLLiveUITests" */;
 			buildPhases = (
+				18331FE62A2E0F943F5BCEFE /* [CP] Check Pods Manifest.lock */,
 				381510BC205017330020C1EE /* Sources */,
 				381510BD205017330020C1EE /* Frameworks */,
 				381510BE205017330020C1EE /* Resources */,
+				05F6A2E1460B75C1EAB736B7 /* [CP] Embed Pods Frameworks */,
+				96E2E87A251A75BB561DB55E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,13 +326,165 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05F6A2E1460B75C1EAB736B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YLLiveUITests/Pods-YLLiveUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		18331FE62A2E0F943F5BCEFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YLLiveUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94BCE11B7DA78DF7E17CF736 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YLLive/Pods-YLLive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96E2E87A251A75BB561DB55E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YLLiveUITests/Pods-YLLiveUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97B8FAEE0AF0731B4D35F64F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YLLiveTests/Pods-YLLiveTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7646967ABCED9EFC30C1780 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YLLiveTests/Pods-YLLiveTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB232F0CC8FF992A89977063 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YLLive/Pods-YLLive-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA2A0186DF592F175F39633E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YLLiveTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8647A1C3C1DB7826FE94FB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YLLive-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3815109D205017320020C1EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				381510A7205017330020C1EE /* ViewController.swift in Sources */,
+				3867DF4A205CA85E00BF89D7 /* YLPageStyle.swift in Sources */,
+				3867DF44205CA83900BF89D7 /* YLPageView.swift in Sources */,
+				3867DF46205CA84300BF89D7 /* YLTitleView.swift in Sources */,
 				381510A5205017330020C1EE /* AppDelegate.swift in Sources */,
+				3867DF48205CA85200BF89D7 /* YLContentView.swift in Sources */,
+				3867DF4E206296A000BF89D7 /* UIColor-Extentsion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +587,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -414,7 +638,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -424,6 +648,7 @@
 		};
 		381510CA205017330020C1EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CC0AFDA78843DFA4AF121A2 /* Pods-YLLive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +664,7 @@
 		};
 		381510CB205017330020C1EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA6B465AA76E7024C6187699 /* Pods-YLLive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +680,7 @@
 		};
 		381510CD205017330020C1EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 555C188519EF76C3ACC11CD3 /* Pods-YLLiveTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +698,7 @@
 		};
 		381510CE205017330020C1EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2664FDD27F1335A4BD1EB95B /* Pods-YLLiveTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +716,7 @@
 		};
 		381510D0205017330020C1EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 805719586429E59011BB91C4 /* Pods-YLLiveUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +733,7 @@
 		};
 		381510D1205017330020C1EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4492F93E688E403312ABAEAF /* Pods-YLLiveUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
