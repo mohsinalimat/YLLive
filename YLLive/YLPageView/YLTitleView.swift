@@ -21,8 +21,9 @@ class YLTitleView: UIView {
     fileprivate var style: YLPageStyle
     fileprivate var titles: [String]
     fileprivate var currentIndex: Int = 0
-    fileprivate lazy var titleLabels: [UILabel] = [UILabel]()
+    
     typealias ColorRGB = (red: CGFloat, green: CGFloat, blue: CGFloat)
+    fileprivate lazy var titleLabels: [UILabel] = [UILabel]()
     fileprivate lazy var normalRGB: ColorRGB = style.normalColor.getRGB()
     fileprivate lazy var selectedRGB: ColorRGB = style.selectedColor.getRGB()
     fileprivate lazy var deltaRGB: ColorRGB = {
@@ -30,6 +31,19 @@ class YLTitleView: UIView {
         let deltaG = self.selectedRGB.green - self.normalRGB.green
         let deltaB = self.selectedRGB.blue - self.normalRGB.blue
         return (deltaR, deltaG, deltaB)
+    }()
+    fileprivate lazy var bottomLine: UIView = {
+        let bottomLine = UIView()
+        bottomLine.backgroundColor = self.style.bottomLineColor
+        bottomLine.frame.size.height = self.style.bottomLineHeight
+        bottomLine.frame.origin.y = self.bounds.height - self.style.bottomLineHeight
+        return bottomLine
+    }()
+    fileprivate lazy var coverView: UIView = {
+        let coverView = UIView()
+        coverView.backgroundColor = self.style.coverBgColor
+        coverView.alpha = self.style.coverAlpha
+        return coverView
     }()
     fileprivate lazy var scrollView: UIScrollView = {
        let scrollView = UIScrollView()
@@ -67,6 +81,42 @@ extension YLTitleView {
         
         // 设置label的frame
         setUpLabelsFrame()
+        
+        setUpBottomLine()
+        
+        setUpCoverView()
+    }
+    
+    private func setUpCoverView() {
+        guard style.isShowCoverView else {
+            return
+        }
+        
+        scrollView.insertSubview(coverView, at: 0)
+        let firstLabel = titleLabels.first!
+        var coverW = firstLabel.bounds.width
+        let coverH = style.coverHeight
+        var coverX = firstLabel.frame.origin.x
+        let coverY = (firstLabel.frame.height - coverH) * 0.5
+        if style.isScrollEnable {
+            coverX -= style.coverMargin
+            coverW += 2 * style.coverMargin
+        }
+        coverView.frame = CGRect(x: coverX, y: coverY, width: coverW, height: coverH)
+        
+        coverView.layer.cornerRadius = style.coverRadius
+        coverView.layer.masksToBounds = true
+    }
+    
+    private func setUpBottomLine() {
+        guard style.isShowBottomLine else {
+            return
+        }
+        
+        scrollView.addSubview(bottomLine)
+        
+        bottomLine.frame.origin.x = titleLabels.first!.frame.origin.x
+        bottomLine.frame.size.width = titleLabels.first!.frame.width
     }
     
     private func setUpLabelsFrame() {
@@ -79,7 +129,7 @@ extension YLTitleView {
         let count = titleLabels.count
         for (i, titleLabel) in titleLabels.enumerated() {
 
-            if style.isScrollEnabel {
+            if style.isScrollEnable {
                 labelW = (titles[i] as NSString).boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: 0), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font : titleLabel.font], context: nil).width
                 labelX = i == 0 ? style.titleMargin * 0.5 : (titleLabels[i-1].frame.maxX + style.titleMargin)
             }else{
@@ -89,8 +139,15 @@ extension YLTitleView {
             titleLabel.frame = CGRect(x: labelX, y: labelY, width: labelW, height: labelH)
         }
         
+        // 设置scale属性
+        if style.isScaleEnable{
+            // ?.在等号的左边，那么系统会自动判断可选类型是否有值
+            // ？.在等号的右边，那么如果可选类型没值，该语句返回nil
+            titleLabels.first?.transform = CGAffineTransform(scaleX: style.maxScale, y: style.maxScale)
+        }
+        
         // 设置contentSize
-        if style.isScrollEnabel {
+        if style.isScrollEnable {
             scrollView.contentSize.width = titleLabels.last!.frame.maxX + style.titleMargin * 0.5
         }
     }
@@ -150,9 +207,39 @@ extension YLTitleView {
         
         // 通知代理
         delegate?.titleView(self, currentIndex: currentIndex)
+        
+        // 调整scale缩放
+        if  style.isScaleEnable {
+            UIView.animate(withDuration: 0.25, animations: {
+                sourceLabel.transform = CGAffineTransform.identity
+                targetLabel.transform = CGAffineTransform(scaleX: self.style.maxScale, y: self.style.maxScale)
+            })
+        }
+        
+        // 调整bottomLine
+        if style.isShowBottomLine {
+            UIView.animate(withDuration: 0.25, animations: {
+                self.bottomLine.frame.origin.x = targetLabel.frame.origin.x
+                self.bottomLine.frame.size.width = targetLabel.frame.width
+            })
+        }
+        
+        // 调整coverView
+        if style.isShowCoverView {
+            let coverX = style.isScrollEnable ? (targetLabel.frame.origin.x - style.coverMargin) : targetLabel.frame.origin.x
+            let coverW = style.isScrollEnable ? (targetLabel.frame.width + style.coverMargin * 2) : targetLabel.frame.width
+            UIView.animate(withDuration: 0.15, animations: {
+                self.coverView.frame.origin.x = coverX
+                self.coverView.frame.size.width = coverW
+            })
+        }
     }
     
     fileprivate func adjustLabelPosition(_ targetLabel: UILabel) {
+        guard style.isScrollEnable else {
+            return
+        }
+        
         // 计算offsetX
         var offsetX =  targetLabel.center.x - bounds.width * 0.5
         
@@ -187,6 +274,34 @@ extension YLTitleView: YLContentViewDelegate {
         // 颜色渐变
         sourceLabel.textColor = UIColor(r: selectedRGB.red - progress * deltaRGB.red, g: selectedRGB.green - progress * deltaRGB.green, b: selectedRGB.blue - progress * deltaRGB.blue)
         targetLabel.textColor = UIColor(r: normalRGB.red + progress * deltaRGB.red, g: normalRGB.green + progress * deltaRGB.green, b: normalRGB.blue + progress * deltaRGB.blue)
+        
+        // 调整scale
+        if style.isScaleEnable {
+            let deltaScale = style.maxScale - 1.0
+            
+            sourceLabel.transform = CGAffineTransform(scaleX: style.maxScale - progress * deltaScale, y: style.maxScale - progress * deltaScale)
+            targetLabel.transform = CGAffineTransform(scaleX: 1.0 + progress * deltaScale, y: 1.0 + progress * deltaScale)
+        }
+        
+        // 调整bottomLine
+        if style.isShowBottomLine {
+            let deltaX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+            let deltaW = targetLabel.frame.width - sourceLabel.frame.width
+            
+            bottomLine.frame.origin.x = sourceLabel.frame.origin.x + progress * deltaX
+            bottomLine.frame.size.width = sourceLabel.frame.width + progress * deltaW
+        }
+        
+        // coverView调整
+        if style.isShowCoverView {
+            let deltaX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+            let deltaW = targetLabel.frame.width - sourceLabel.frame.width
+            
+            coverView.frame.size.width = style.isScrollEnable ? (sourceLabel.frame.width + 2 * style.coverMargin + deltaW * progress) : (sourceLabel.frame.width + deltaW * progress)
+            coverView.frame.origin.x = style.isScrollEnable ? (sourceLabel.frame.origin.x - style.coverMargin + deltaX * progress) : (sourceLabel.frame.origin.x + deltaX * progress)
+            
+            
+        }
     }
 }
 

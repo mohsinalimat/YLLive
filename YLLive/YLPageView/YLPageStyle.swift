@@ -17,6 +17,22 @@ struct YLPageStyle {
     var titleMargin: CGFloat = 30
     
     /// 是否可以滚动
-    var isScrollEnabel: Bool = false
+    var isScrollEnable: Bool = false
     
+    /// 是否显示滚动条
+    var isShowBottomLine: Bool = false
+    var bottomLineColor: UIColor = UIColor.orange
+    var bottomLineHeight: CGFloat = 2
+    
+    /// 是否需要缩放
+    var isScaleEnable: Bool = false
+    var maxScale: CGFloat = 1.2
+    
+    /// 是否显示遮盖
+    var isShowCoverView: Bool = false
+    var coverBgColor: UIColor = UIColor.black
+    var coverAlpha: CGFloat = 0.4
+    var coverMargin: CGFloat = 8
+    var coverHeight: CGFloat = 25
+    var coverRadius: CGFloat = 12
 }
