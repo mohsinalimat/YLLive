@@ -25,14 +25,13 @@ class ViewController: UIViewController {
 
         // 1.创建需要的样式
         var style = YLPageStyle()
-//        style.isShowBottomLine = true
+        style.isShowBottomLine = true
         style.isScrollEnable = true
 //        style.isScaleEnable = true
         style.isShowCoverView = true
         
         // 2.获取所有的标题
-//        let titles = ["推荐","游戏","娱乐","趣玩","娱乐","热门"]
-        let titles = ["推荐","游戏","热门游戏","趣玩游戏","娱乐","趣玩","娱乐"]
+        let titles = ["推荐","王者荣耀","绝地求生","LOL","一起看","星秀","娱乐"]
 
         // 3.获取所有的内容控制器
         var childVcs = [UIViewController]()
