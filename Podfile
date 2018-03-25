@@ -9,7 +9,8 @@ target 'YLLive' do
 
   target 'YLLiveTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'Alamofire', '~> 4.5.0'
+    pod 'Kingfisher', '~> 3.11.0'
   end
 
   target 'YLLiveUITests' do
@@ -18,3 +19,4 @@ target 'YLLive' do
   end
 
 end
+
