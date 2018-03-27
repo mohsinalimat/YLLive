@@ -7,17 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2AC08CFAED1F9E7ED5AE6F95 /* Pods_YLLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E601D111AF36F1578BF6FF04 /* Pods_YLLive.framework */; };
 		381510A5205017330020C1EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381510A4205017330020C1EE /* AppDelegate.swift */; };
 		381510AA205017330020C1EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381510A8205017330020C1EE /* Main.storyboard */; };
 		381510AC205017330020C1EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 381510AB205017330020C1EE /* Assets.xcassets */; };
 		381510AF205017330020C1EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 381510AD205017330020C1EE /* LaunchScreen.storyboard */; };
 		381510BA205017330020C1EE /* YLLiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381510B9205017330020C1EE /* YLLiveTests.swift */; };
 		381510C5205017330020C1EE /* YLLiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381510C4205017330020C1EE /* YLLiveUITests.swift */; };
+		3836A958206A832700FC1730 /* YLKingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836A957206A832700FC1730 /* YLKingfisherExtension.swift */; };
 		385B042B2067F0CB00E8B561 /* YLRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385B042A2067F0CB00E8B561 /* YLRoomViewController.swift */; };
 		385B042E2067F13D00E8B561 /* YLHomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385B042D2067F13D00E8B561 /* YLHomeViewCell.swift */; };
-		385B04362067F78300E8B561 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385B04372067F78300E8B561 /* Alamofire.framework */; };
-		385B04382067F78700E8B561 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385B04392067F78700E8B561 /* Kingfisher.framework */; };
 		389125ED2067A96E00BCE880 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389125DA2067A96E00BCE880 /* ViewController.swift */; };
 		389125EE2067A96E00BCE880 /* YLHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389125DB2067A96E00BCE880 /* YLHomeViewController.swift */; };
 		389125EF2067A96E00BCE880 /* YLWatefallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389125DC2067A96E00BCE880 /* YLWatefallLayout.swift */; };
@@ -32,6 +30,7 @@
 		389126022067AC2700BCE880 /* YLDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389126012067AC2700BCE880 /* YLDiscoverViewController.swift */; };
 		389126052067B1D400BCE880 /* YLNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389126042067B1D400BCE880 /* YLNavigationController.swift */; };
 		389126072067B33400BCE880 /* YLAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389126062067B33400BCE880 /* YLAnchorViewController.swift */; };
+		38BB3F4E206A7627001149C2 /* Pods_YLLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BB3F4F206A7627001149C2 /* Pods_YLLive.framework */; };
 		38E32AE52067D253007BA0CC /* YLHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E32AE42067D253007BA0CC /* YLHomeViewModel.swift */; };
 		38E32AE72067D282007BA0CC /* YLAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E32AE62067D282007BA0CC /* YLAnchorModel.swift */; };
 		38E32AE92067D34F007BA0CC /* YLNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E32AE82067D34F007BA0CC /* YLNetworkTools.swift */; };
@@ -39,8 +38,8 @@
 		38EE66912067BB5000D3D809 /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38EE66902067BB5000D3D809 /* types.plist */; };
 		38EE66982067BBDE00D3D809 /* YLBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EE66972067BBDD00D3D809 /* YLBaseModel.swift */; };
 		38EE669A2067BC2F00D3D809 /* YLHomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EE66992067BC2F00D3D809 /* YLHomeType.swift */; };
-		572F31A81E8E181D2655789E /* Pods_YLLiveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61526C4598743A0D497AC736 /* Pods_YLLiveTests.framework */; };
-		6FA562C1DCF4AA2D663154D9 /* Pods_YLLiveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4AB962F99C3D671D12D6A0 /* Pods_YLLiveUITests.framework */; };
+		5B0124124E43CA18B27A01D6 /* Pods_YLLiveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CB9A199F11C13AF9E6379A /* Pods_YLLiveTests.framework */; };
+		C19BAF2E9063842F3F92D3B5 /* Pods_YLLiveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07869EEEC8019FAADDA6D6B /* Pods_YLLiveUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +76,6 @@
 		04C1214409523A225F8AC265 /* Pods-YLLiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLLiveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YLLiveUITests/Pods-YLLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		142A20D1127F9D9E3FB51485 /* Pods-YLLiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLLiveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YLLiveTests/Pods-YLLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		204B57A0F794B34832C01BB9 /* Pods-YLLiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLLiveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YLLiveTests/Pods-YLLiveTests.release.xcconfig"; sourceTree = "<group>"; };
-		2E4AB962F99C3D671D12D6A0 /* Pods_YLLiveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YLLiveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31136404EF14E11E7B38F4B3 /* Pods-YLLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLLiveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YLLiveUITests/Pods-YLLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		381510A1205017330020C1EE /* YLLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		381510A4205017330020C1EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,14 +89,9 @@
 		381510C0205017330020C1EE /* YLLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YLLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		381510C4205017330020C1EE /* YLLiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLLiveUITests.swift; sourceTree = "<group>"; };
 		381510C6205017330020C1EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		385B04082067D51200E8B561 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		385B040A2067D51700E8B561 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		385B040C2067DAAF00E8B561 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		385B040E2067DCB400E8B561 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3836A957206A832700FC1730 /* YLKingfisherExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLKingfisherExtension.swift; sourceTree = "<group>"; };
 		385B042A2067F0CB00E8B561 /* YLRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLRoomViewController.swift; sourceTree = "<group>"; };
 		385B042D2067F13D00E8B561 /* YLHomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLHomeViewCell.swift; sourceTree = "<group>"; };
-		385B04372067F78300E8B561 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		385B04392067F78700E8B561 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		389125DA2067A96E00BCE880 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		389125DB2067A96E00BCE880 /* YLHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLHomeViewController.swift; sourceTree = "<group>"; };
 		389125DC2067A96E00BCE880 /* YLWatefallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLWatefallLayout.swift; sourceTree = "<group>"; };
@@ -113,6 +106,7 @@
 		389126012067AC2700BCE880 /* YLDiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLDiscoverViewController.swift; sourceTree = "<group>"; };
 		389126042067B1D400BCE880 /* YLNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLNavigationController.swift; sourceTree = "<group>"; };
 		389126062067B33400BCE880 /* YLAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLAnchorViewController.swift; sourceTree = "<group>"; };
+		38BB3F4F206A7627001149C2 /* Pods_YLLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_YLLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E32AE42067D253007BA0CC /* YLHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLHomeViewModel.swift; sourceTree = "<group>"; };
 		38E32AE62067D282007BA0CC /* YLAnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLAnchorModel.swift; sourceTree = "<group>"; };
 		38E32AE82067D34F007BA0CC /* YLNetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLNetworkTools.swift; sourceTree = "<group>"; };
@@ -122,8 +116,8 @@
 		38EE66992067BC2F00D3D809 /* YLHomeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLHomeType.swift; sourceTree = "<group>"; };
 		4AA29A7568FE97CD0EB50CAE /* Pods-YLLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-YLLive/Pods-YLLive.release.xcconfig"; sourceTree = "<group>"; };
 		4B78E2092ECBB36DA6587C75 /* Pods-YLLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YLLive/Pods-YLLive.debug.xcconfig"; sourceTree = "<group>"; };
-		61526C4598743A0D497AC736 /* Pods_YLLiveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YLLiveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E601D111AF36F1578BF6FF04 /* Pods_YLLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YLLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66CB9A199F11C13AF9E6379A /* Pods_YLLiveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YLLiveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D07869EEEC8019FAADDA6D6B /* Pods_YLLiveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YLLiveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,9 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				385B04382067F78700E8B561 /* Kingfisher.framework in Frameworks */,
-				385B04362067F78300E8B561 /* Alamofire.framework in Frameworks */,
-				2AC08CFAED1F9E7ED5AE6F95 /* Pods_YLLive.framework in Frameworks */,
+				38BB3F4E206A7627001149C2 /* Pods_YLLive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				572F31A81E8E181D2655789E /* Pods_YLLiveTests.framework in Frameworks */,
+				5B0124124E43CA18B27A01D6 /* Pods_YLLiveTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FA562C1DCF4AA2D663154D9 /* Pods_YLLiveUITests.framework in Frameworks */,
+				C19BAF2E9063842F3F92D3B5 /* Pods_YLLiveUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				38E32AE82067D34F007BA0CC /* YLNetworkTools.swift */,
+				3836A957206A832700FC1730 /* YLKingfisherExtension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -443,15 +436,9 @@
 		A3F19A904808945F0FCCCE06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				385B04392067F78700E8B561 /* Kingfisher.framework */,
-				385B04372067F78300E8B561 /* Alamofire.framework */,
-				385B040E2067DCB400E8B561 /* Kingfisher.framework */,
-				385B040C2067DAAF00E8B561 /* Alamofire.framework */,
-				385B040A2067D51700E8B561 /* Kingfisher.framework */,
-				385B04082067D51200E8B561 /* Alamofire.framework */,
-				E601D111AF36F1578BF6FF04 /* Pods_YLLive.framework */,
-				61526C4598743A0D497AC736 /* Pods_YLLiveTests.framework */,
-				2E4AB962F99C3D671D12D6A0 /* Pods_YLLiveUITests.framework */,
+				38BB3F4F206A7627001149C2 /* Pods_YLLive.framework */,
+				66CB9A199F11C13AF9E6379A /* Pods_YLLiveTests.framework */,
+				D07869EEEC8019FAADDA6D6B /* Pods_YLLiveUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -667,9 +654,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YLLive/Pods-YLLive-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -785,6 +777,7 @@
 				389125F62067A9B200BCE880 /* YLMainViewController.swift in Sources */,
 				389126072067B33400BCE880 /* YLAnchorViewController.swift in Sources */,
 				389125EE2067A96E00BCE880 /* YLHomeViewController.swift in Sources */,
+				3836A958206A832700FC1730 /* YLKingfisherExtension.swift in Sources */,
 				38EE668F2067B66500D3D809 /* Const.swift in Sources */,
 				389125F42067A96E00BCE880 /* YLTitleView.swift in Sources */,
 				385B042E2067F13D00E8B561 /* YLHomeViewCell.swift in Sources */,

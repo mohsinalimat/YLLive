@@ -37,6 +37,7 @@ class YLAnchorViewController: UIViewController {
         super.viewDidLoad()
         
         view.addSubview(collectionView)
+        loadData(index: 0)
     }
 
 }

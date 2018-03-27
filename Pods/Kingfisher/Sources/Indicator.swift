@@ -4,7 +4,7 @@
 //
 //  Created by João D. Moreira on 30/08/16.
 //
-//  Copyright (c) 2017 Wei Wang <onevcat@gmail.com>
+//  Copyright (c) 2016 Wei Wang <onevcat@gmail.com>
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -86,42 +86,34 @@ extension Indicator {
 
 // MARK: - ActivityIndicator
 // Displays a NSProgressIndicator / UIActivityIndicatorView
-class ActivityIndicator: Indicator {
+struct ActivityIndicator: Indicator {
 
     #if os(macOS)
     private let activityIndicatorView: NSProgressIndicator
     #else
     private let activityIndicatorView: UIActivityIndicatorView
     #endif
-    private var animatingCount = 0
 
     var view: IndicatorView {
         return activityIndicatorView
     }
 
     func startAnimatingView() {
-        animatingCount += 1
-        // Alrady animating
-        if animatingCount == 1 {
-            #if os(macOS)
-                activityIndicatorView.startAnimation(nil)
-            #else
-                activityIndicatorView.startAnimating()
-            #endif
-            activityIndicatorView.isHidden = false
-        }
+        #if os(macOS)
+            activityIndicatorView.startAnimation(nil)
+        #else
+            activityIndicatorView.startAnimating()
+        #endif
+        activityIndicatorView.isHidden = false
     }
 
     func stopAnimatingView() {
-        animatingCount = max(animatingCount - 1, 0)
-        if animatingCount == 0 {
-            #if os(macOS)
-                activityIndicatorView.stopAnimation(nil)
-            #else
-                activityIndicatorView.stopAnimating()
-            #endif
-            activityIndicatorView.isHidden = true
-        }
+        #if os(macOS)
+            activityIndicatorView.stopAnimation(nil)
+        #else
+            activityIndicatorView.stopAnimating()
+        #endif
+        activityIndicatorView.isHidden = true
     }
 
     init() {
@@ -143,7 +135,7 @@ class ActivityIndicator: Indicator {
 
 // MARK: - ImageIndicator
 // Displays an ImageView. Supports gif
-class ImageIndicator: Indicator {
+struct ImageIndicator: Indicator {
     private let animatedImageIndicatorView: ImageView
 
     var view: IndicatorView {
@@ -153,9 +145,9 @@ class ImageIndicator: Indicator {
     init?(imageData data: Data, processor: ImageProcessor = DefaultImageProcessor.default, options: KingfisherOptionsInfo = KingfisherEmptyOptionsInfo) {
 
         var options = options
-        // Use normal image view to show animations, so we need to preload all animation data.
-        if !options.preloadAllAnimationData {
-            options.append(.preloadAllAnimationData)
+        // Use normal image view to show gif, so we need to preload all gif data.
+        if !options.preloadAllGIFData {
+            options.append(.preloadAllGIFData)
         }
         
         guard let image = processor.process(item: .data(data), options: options) else {
@@ -164,7 +156,6 @@ class ImageIndicator: Indicator {
 
         animatedImageIndicatorView = ImageView()
         animatedImageIndicatorView.image = image
-        animatedImageIndicatorView.frame = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
         
         #if os(macOS)
             // Need for gif to animate on macOS
@@ -172,6 +163,7 @@ class ImageIndicator: Indicator {
             self.animatedImageIndicatorView.canDrawSubviewsIntoLayer = true
         #else
             animatedImageIndicatorView.contentMode = .center
+            
             animatedImageIndicatorView.autoresizingMask = [.flexibleLeftMargin,
                                                            .flexibleRightMargin,
                                                            .flexibleBottomMargin,

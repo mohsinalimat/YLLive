@@ -11,19 +11,27 @@ import Kingfisher
 
 class YLHomeViewCell: UICollectionViewCell {
     
-    fileprivate var albumImageView: UIImageView!
-    fileprivate var liveImageView: UIImageView!
-    fileprivate var nickNameLabel: UILabel!
-    fileprivate var onlinePeopleLabel: UIButton!
+    fileprivate var albumImageView: UIImageView?
+    fileprivate var liveImageView: UIImageView?
+    fileprivate var nickNameLabel: UILabel?
+    fileprivate var onlinePeopleLabel: UIButton?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setUpUI()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     var anchorModel: YLAnchorViewModel? {
         didSet {
-            
             let url = URL(string: (anchorModel!.isEvenIndex ? anchorModel?.pic74 : anchorModel?.pic51)!)
-            albumImageView.kf.setImage(with: url)
-            liveImageView.isHidden = anchorModel?.live == 0
-            nickNameLabel.text = anchorModel?.name
-            onlinePeopleLabel.setTitle("\(anchorModel?.focus ?? 0)", for: .normal)
+            albumImageView?.kf.setImage(with: url)
+            liveImageView?.isHidden = anchorModel?.live == 0
+            nickNameLabel?.text = anchorModel?.name
+            onlinePeopleLabel?.setTitle("\(anchorModel?.focus ?? 0)", for: .normal)
         }
     }
 }
@@ -34,5 +42,10 @@ extension YLHomeViewCell {
         liveImageView = UIImageView(frame: CGRect(x: self.bounds.width - 31, y: 8, width: 23, height: 13))
         nickNameLabel = UILabel(frame: CGRect(x: 8, y: self.bounds.height - 23, width: 100, height: 15))
         onlinePeopleLabel = UIButton(frame: CGRect(x: self.bounds.width - 50, y: self.bounds.height - 23, width: 42, height: 15))
+        
+        addSubview(albumImageView!)
+        addSubview(liveImageView!)
+        addSubview(nickNameLabel!)
+        addSubview(onlinePeopleLabel!)
     }
 }

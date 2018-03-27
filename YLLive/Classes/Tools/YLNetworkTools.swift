@@ -23,7 +23,7 @@ class YLNetworkTools {
         // 发送网络请求
         Alamofire.request(URLString, method: method, parameters: parameters).validate(contentType: ["text/plain"]).responseJSON { (response) in
             
-            guard let result = response.request?.value else {
+            guard let result = response.result.value else {
                 print(response.result.error!)
                 return
             }
