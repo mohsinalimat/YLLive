@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "688F0B71B02DDF6FAC651D53C9CBA4C3"
-               BuildableName = "Pods_YLLive.framework"
-               BlueprintName = "Pods-YLLive"
+               BlueprintIdentifier = "27319F9CA20F27ADCAF2F37C781564D3"
+               BuildableName = "SnapKit.framework"
+               BlueprintName = "SnapKit"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "688F0B71B02DDF6FAC651D53C9CBA4C3"
-            BuildableName = "Pods_YLLive.framework"
-            BlueprintName = "Pods-YLLive"
+            BlueprintIdentifier = "27319F9CA20F27ADCAF2F37C781564D3"
+            BuildableName = "SnapKit.framework"
+            BlueprintName = "SnapKit"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

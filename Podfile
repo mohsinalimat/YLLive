@@ -6,6 +6,7 @@ target 'YLLive' do
   use_frameworks!
   pod 'Alamofire', '~> 4.0.1'
   pod 'Kingfisher', '~> 3.1.1'
+  pod 'SnapKit', '~> 3.2.0'
   # Pods for YLLive
 
   target 'YLLiveTests' do

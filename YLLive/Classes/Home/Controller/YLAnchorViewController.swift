@@ -71,13 +71,6 @@ extension YLAnchorViewController: UICollectionViewDataSource, UICollectionViewDe
         navigationController?.pushViewController(liveVc, animated: true)
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y >= scrollView.contentSize.height - scrollView.bounds.height {
-            itemCount += 30
-            collectionView.reloadData()
-        }
-    }
-    
     func waterfallLayout(_ layout: YLWatefallLayout, indexPath: IndexPath) -> CGFloat {
         return indexPath.item % 2 == 0 ? kScreenW * 2 / 3 : kScreenW * 0.5
     }
