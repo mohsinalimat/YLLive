@@ -16,6 +16,7 @@
 		3836A958206A832700FC1730 /* YLKingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836A957206A832700FC1730 /* YLKingfisherExtension.swift */; };
 		385B042B2067F0CB00E8B561 /* YLRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385B042A2067F0CB00E8B561 /* YLRoomViewController.swift */; };
 		385B042E2067F13D00E8B561 /* YLHomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385B042D2067F13D00E8B561 /* YLHomeViewCell.swift */; };
+		3875AC54206BCE3700D4B649 /* YLRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3875AC53206BCE3600D4B649 /* YLRoomViewController.xib */; };
 		389125ED2067A96E00BCE880 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389125DA2067A96E00BCE880 /* ViewController.swift */; };
 		389125EE2067A96E00BCE880 /* YLHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389125DB2067A96E00BCE880 /* YLHomeViewController.swift */; };
 		389125EF2067A96E00BCE880 /* YLWatefallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389125DC2067A96E00BCE880 /* YLWatefallLayout.swift */; };
@@ -92,6 +93,7 @@
 		3836A957206A832700FC1730 /* YLKingfisherExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLKingfisherExtension.swift; sourceTree = "<group>"; };
 		385B042A2067F0CB00E8B561 /* YLRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLRoomViewController.swift; sourceTree = "<group>"; };
 		385B042D2067F13D00E8B561 /* YLHomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YLHomeViewCell.swift; sourceTree = "<group>"; };
+		3875AC53206BCE3600D4B649 /* YLRoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLRoomViewController.xib; sourceTree = "<group>"; };
 		389125DA2067A96E00BCE880 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		389125DB2067A96E00BCE880 /* YLHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLHomeViewController.swift; sourceTree = "<group>"; };
 		389125DC2067A96E00BCE880 /* YLWatefallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLWatefallLayout.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 		389125F82067ABC000BCE880 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3875AC53206BCE3600D4B649 /* YLRoomViewController.xib */,
 				385B042A2067F0CB00E8B561 /* YLRoomViewController.swift */,
 			);
 			path = Controller;
@@ -574,6 +577,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3875AC54206BCE3700D4B649 /* YLRoomViewController.xib in Resources */,
 				381510AF205017330020C1EE /* LaunchScreen.storyboard in Resources */,
 				381510AC205017330020C1EE /* Assets.xcassets in Resources */,
 				38EE66912067BB5000D3D809 /* types.plist in Resources */,
