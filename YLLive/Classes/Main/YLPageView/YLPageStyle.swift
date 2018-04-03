@@ -35,4 +35,7 @@ struct YLPageStyle {
     var coverMargin: CGFloat = 8
     var coverHeight: CGFloat = 25
     var coverRadius: CGFloat = 12
+    
+    /// pageControl高度
+    var pageControlHeight: CGFloat = 20
 }

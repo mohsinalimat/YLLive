@@ -62,6 +62,12 @@ extension YLRoomViewController {
             print("点击了分享")
         case 2:
             print("点击了礼物")
+            let titles = ["推荐", "游戏", "热门", "趣玩"]
+            let style = YLPageStyle()
+            let pageFrame = CGRect(x: 0, y: kScreenH - 300, width: view.bounds.width, height: 300)
+            let pageView = YLPageView(frame: pageFrame, style: style, titles: titles)
+            pageView.backgroundColor = UIColor.cyan
+            view.addSubview(pageView)
         case 3:
             print("点击了更多")
         case 4:
