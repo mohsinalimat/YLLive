@@ -73,18 +73,17 @@ extension YLPageView {
         addSubview(titleView)
         
         let collectionFrame = CGRect(x: 0, y: style.titleHeight, width: bounds.width, height: bounds.height - style.titleHeight - style.pageControlHeight)
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 50, height: 50)
+        let layout = YLPageViewLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        layout.minimumLineSpacing = 10
-        layout.minimumInteritemSpacing = 10
-        layout.scrollDirection = .horizontal
+        layout.lineSapcing = 10
+        layout.itemSpacing = 10
         
         let collectionView = UICollectionView(frame: collectionFrame, collectionViewLayout: layout)
         collectionView.isPagingEnabled = true
         collectionView.scrollsToTop = false
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.dataSource = self
+        
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCellID)
         addSubview(collectionView)
         
