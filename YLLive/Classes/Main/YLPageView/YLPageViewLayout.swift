@@ -13,7 +13,9 @@ class YLPageViewLayout: UICollectionViewLayout {
     var sectionInset: UIEdgeInsets = UIEdgeInsets.zero
     var itemSpacing: CGFloat = 0
     var lineSapcing: CGFloat = 0
-    var pageCount = 0
+    var cols = 4
+    var rows = 2
+    fileprivate lazy var pageCount = 0
 }
 
 
@@ -28,9 +30,6 @@ extension YLPageViewLayout {
         
         // 获取多少组
         let sectionCount = collectionView.numberOfSections
-        
-        let cols = 4
-        let rows = 2
         
         let itemW: CGFloat = (collectionView.bounds.width - sectionInset.left - sectionInset.right - CGFloat(cols - 1) * itemSpacing) / CGFloat(cols)
         let itemH: CGFloat = (collectionView.bounds.height - sectionInset.top - sectionInset.bottom - CGFloat(rows - 1) * lineSapcing) / CGFloat(rows)

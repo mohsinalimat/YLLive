@@ -8,15 +8,24 @@
 
 import UIKit
 
-private let kCellID = "identifier"
+protocol YLPageViewDataSource: class {
+    func numberOfSectionsInPageView(_ pageView: YLPageView) -> Int
+    func pageView(_ pageView: YLPageView, numberOfItemsInSection section: Int) -> Int
+    func pageView(_ pageView: YLPageView, cellForItemAtIndexPath indexPath: IndexPath) -> UICollectionViewCell
+}
 
 class YLPageView: UIView {
 
+    weak var dataSource: YLPageViewDataSource?
+    
     // MARK: 定义属性
     fileprivate var style: YLPageStyle
+    fileprivate var layout: YLPageViewLayout!
     fileprivate var titles: [String]
     fileprivate var childVcs: [UIViewController]!
     fileprivate var parentVc: UIViewController!
+    fileprivate var collectionView: UICollectionView!
+    fileprivate var pageControl: UIPageControl!
     fileprivate lazy var titleView: YLTitleView = {
         let titleFrame = CGRect(x: 0, y: 0, width: bounds.width, height: style.titleHeight)
         let titleView = YLTitleView(frame: titleFrame, style: style, titles: titles)
@@ -36,9 +45,10 @@ class YLPageView: UIView {
         setUpUI()
     }
     
-    init(frame: CGRect, style: YLPageStyle, titles: [String]) {
+    init(frame: CGRect, style: YLPageStyle, titles: [String], layout: YLPageViewLayout) {
         self.style = style
         self.titles = titles
+        self.layout = layout
         super.init(frame: frame)
         
         setUpCollectionUI()
@@ -73,23 +83,17 @@ extension YLPageView {
         addSubview(titleView)
         
         let collectionFrame = CGRect(x: 0, y: style.titleHeight, width: bounds.width, height: bounds.height - style.titleHeight - style.pageControlHeight)
-        let layout = YLPageViewLayout()
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        layout.lineSapcing = 10
-        layout.itemSpacing = 10
         
-        let collectionView = UICollectionView(frame: collectionFrame, collectionViewLayout: layout)
+        collectionView = UICollectionView(frame: collectionFrame, collectionViewLayout: layout)
         collectionView.isPagingEnabled = true
         collectionView.scrollsToTop = false
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.dataSource = self
-        
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCellID)
         addSubview(collectionView)
         
         // 添加pageControl
         let pageControlFrame = CGRect(x: 0, y: collectionView.frame.maxY, width: bounds.width, height: style.pageControlHeight)
-        let pageControl = UIPageControl(frame: pageControlFrame)
+        pageControl = UIPageControl(frame: pageControlFrame)
         pageControl.numberOfPages = 4
         addSubview(pageControl)
     }
@@ -97,16 +101,28 @@ extension YLPageView {
 
 extension YLPageView: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        return dataSource?.numberOfSectionsInPageView(self) ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return dataSource?.pageView(self, numberOfItemsInSection: section) ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCellID, for: indexPath)
-        cell.backgroundColor = UIColor.randomColor
-        return cell
+        return dataSource!.pageView(self, cellForItemAtIndexPath: indexPath)
+    }
+}
+
+extension YLPageView {
+    func registerCell(_ cellClass: AnyClass?, forCellWithReuseIdentifier identifier: String) {
+        collectionView.register(cellClass, forCellWithReuseIdentifier: identifier)
+    }
+    
+    func registerNib(_ nib: UINib?, forCellWithReuseIdentifier identifier: String) {
+        collectionView.register(nib, forCellWithReuseIdentifier: identifier)
+    }
+    
+    func dequeueReusableCell(withReuseIdentifier identifier: String, for indexPath: IndexPath) -> UICollectionViewCell {
+        return collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
     }
 }
