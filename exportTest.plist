@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>signingStyle</key>
+		<string>manual</string>
+		<key>signingCertificate</key>
+		<string>iPhone Distribution</string>
+		<key>com.isoftstone.ipsa.im</key>
+		<string>ipsaim_inhouse</string>
+	</dict>
+	<key>method</key>
+	<string>enterprise</string>
+	<key>compileBitcode</key>
+	<true/>
+</dict>
+</plist>
